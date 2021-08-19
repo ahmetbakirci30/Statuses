@@ -1,0 +1,29 @@
+<div infiniteScroll (scrolled)="onScroll()">
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class=" col" *ngFor="let video of videos">
+      <div class=" card h-100" data-bs-toggle="modal" data-bs-target="#videoPlayer" (click)="videoItem=video">
+        <h5 class="text-center" style="height: 10px;margin:6px 10px 16px;">{{video?.title}}</h5>
+        <img [src]="video?.coverPath" class="rounded" alt="حدث خطأ أثناء عرض الصورة"
+          style="height: 230px; object-fit: cover;">
+      </div>
+    </div>
+  </div>
+
+  <div class="text-center m-5" *ngIf="loading">
+    <div class="spinner-grow" role="status"></div>
+  </div>
+
+  <div class="modal fade" id="videoPlayer" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="videoPlayerLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="videoPlayerLabel">{{videoItem?.title}}</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+            (click)="videoItem=null"></button>
+        </div>
+        <video [src]="videoItem?.videoPath" controls autoplay></video>
+      </div>
+    </div>
+  </div>
+</div>

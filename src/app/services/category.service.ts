@@ -3,13 +3,14 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class CategoryService {
-
-  constructor(private httpClient: HttpClient) { }
+  constructor(private httpClient: HttpClient) {}
 
   get(pageSize: number = 9) {
-    return this.httpClient.get<any[]>(`${ApiUrl}categories/search?pageSize=${pageSize}&shuffle=true`);
+    return this.httpClient.get<any[]>(
+      `${ApiUrl}categories/search?pageSize=${pageSize}&shuffle=true`
+    );
   }
 }

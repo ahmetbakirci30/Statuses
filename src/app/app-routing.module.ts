@@ -7,11 +7,11 @@ const routes: Routes = [
   { path: '', component: VideoListComponent },
   { path: 'videos', component: VideoListComponent },
   { path: 'videos/category/:categoryId', component: VideoListComponent },
-  { path: '**', pathMatch: 'full', component: PageNotFoundComponent }
+  { path: '**', pathMatch: 'full', component: PageNotFoundComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

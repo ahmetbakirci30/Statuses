@@ -1,7 +1,7 @@
+import { Guid } from 'guid-typescript';
 import { ApiUrl } from './../../environments/environment.prod';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Guid } from 'guid-typescript';
 
 @Injectable({
   providedIn: 'root',

@@ -8,6 +8,7 @@ import { VideoListComponent } from './components/video/video-list/video-list.com
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { AppComponent } from './app.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { AppAdsComponent } from './components/app-ads/app-ads.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { FooterComponent } from './components/footer/footer.component';
     VideoListComponent,
     PageNotFoundComponent,
     FooterComponent,
+    AppAdsComponent,
   ],
   imports: [
     BrowserModule,
